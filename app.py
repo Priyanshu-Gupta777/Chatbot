@@ -51,4 +51,5 @@ iface = gr.Interface(
     title="AI Doctor with Vision and Voice"
 )
 
-iface.launch(debug=True)
+if __name__ == "__main__":
+    iface.launch(debug=True)
