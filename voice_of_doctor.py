@@ -30,6 +30,10 @@ import subprocess
 from gtts import gTTS
 from pydub import AudioSegment
 
+AudioSegment.converter = "/usr/bin/ffmpeg"
+AudioSegment.ffmpeg = "/usr/bin/ffmpeg"
+AudioSegment.ffprobe = "/usr/bin/ffprobe"
+
 def text_to_speech_auto(inptext, output_file):
     language = 'en'
 
