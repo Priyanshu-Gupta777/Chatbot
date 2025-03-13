@@ -2,7 +2,11 @@
 nixPkgs = ["ffmpeg", "portaudio", "python312", "git"]
 
 [phases.build]
-cmds = ["pip install -r requirements.txt"]
+cmds = [
+  "pip install --upgrade pip",
+  "pip install --no-cache-dir python-dotenv",
+  "pip install --no-cache-dir -r requirements.txt"
+]
 
 [phases.start]
 cmds = ["python app.py"]
