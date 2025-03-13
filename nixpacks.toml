@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["ffmpeg", "portaudio", "python312", "gcc", "libffi", "git"]
+
+[phases.build]
+cmds = ["pip install -r requirements.txt"]
+
+[phases.start]
+cmds = ["python app.py"]
